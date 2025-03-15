@@ -23,11 +23,11 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    Long Id;
+    private Long Id;
     @Column(name = "username", length = 50, unique = true)
     @NotBlank(message = "Username is required")
     @Size(min = 1, max = 50, message = "Username must be between 1 and 50 characters")
-    String username;
+    private String username;
 
     @Column(name = "password", length = 250)
     @NotBlank(message = "Password is required")
